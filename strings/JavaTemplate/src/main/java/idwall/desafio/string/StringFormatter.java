@@ -27,8 +27,9 @@ public abstract class StringFormatter {
         int lineLength = 0;
         StringBuilder currentLine = new StringBuilder();
 
-        String[] lineInputs = text.replace("\n", " ").split(" ");
-        for (String word : lineInputs) {
+        String[] wordsInputs = splitIntoWordsArray(text);
+
+        for (String word : wordsInputs) {
             {
                 if (lineLength + word.length() > limit) {
                     lines.add(currentLine.toString());
@@ -48,7 +49,30 @@ public abstract class StringFormatter {
         return formatResult(lines);
     }
 
+    /**
+     * Method responsible for breaking the text into an array of words
+     * @param text
+     * @return
+     */
+    private String[] splitIntoWordsArray(String text){
+        return removeLineBreaker(text).split(" ");
+    }
 
+    /**
+     * Method responsible for replacing the line breaker into space
+     * @param text
+     * @return
+     */
+    private String removeLineBreaker(String text){
+        return text.replace("\n", " ");
+    }
+
+
+    /**
+     * Method responsible for removing the last blank space
+     * @param line
+     * @return
+     */
     protected String removeBlankEnd(String line) {
         if (line.endsWith(" ")) {
             return line.substring(0, line.length() - 1);
@@ -56,5 +80,11 @@ public abstract class StringFormatter {
         return line;
     }
 
+    /**
+     * protected method that will be implemented by class's child
+     * according to a specific logic
+     * @param lines
+     * @return
+     */
     protected abstract String formatResult(List<String> lines);
 }
