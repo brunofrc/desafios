@@ -1,6 +1,8 @@
 
 # Considerações
-Utilizei o String para fazer injeção de dependencias e procurei fazer uma divisão entre serviços assim cada serviço é responsável por apenas uma funcionalidade e cada um deles não depende da implementação dos outros e sim de suas respectivas abstrações, com isso temos um ganho na manutenibilidade
+-Para execução basta fazer um build do projeto com maven e executar o método main e escolher uma das duas opções
+
+-Utilizei o String para fazer injeção de dependencias e procurei fazer uma divisão entre serviços assim cada serviço é responsável por apenas uma funcionalidade e cada um deles não depende da implementação dos outros e sim de suas respectivas abstrações, com isso temos um ganho na manutenibilidade
 
 # Desafio 2: Crawlers
 
