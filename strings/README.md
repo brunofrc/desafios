@@ -1,3 +1,6 @@
+# Considerações
+Seguindo alguns princípios de boas práticas, optei por implementar o método format genérico na classe abstrada e implementar o método abstrato formatResult em cada sub classe onde foi implementado conforme cada lógica específica. Assim, se precisarmos acrescentar uma nova funcionalidade a classe está aberta para extensões e nāo modificações
+
 # Desafio 1: Strings
 
 Após ler o coding style do kernel Linux, você descobre a mágica que é
