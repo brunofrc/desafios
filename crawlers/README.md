@@ -1,3 +1,7 @@
+
+# Considerações
+Utilizei o String para fazer injeção de dependencias e procurei fazer uma divisão entre serviços assim cada serviço é responsável por apenas uma funcionalidade e cada um deles não depende da implementação dos outros e sim de suas respectivas abstrações, com isso temos um ganho na manutenibilidade
+
 # Desafio 2: Crawlers
 
 Parte do trabalho na IDwall inclui desenvolver *crawlers/scrapers* para coletar dados de websites.

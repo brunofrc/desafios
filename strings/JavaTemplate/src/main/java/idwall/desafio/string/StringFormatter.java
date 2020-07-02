@@ -31,6 +31,9 @@ public abstract class StringFormatter {
 
         for (String word : wordsInputs) {
             {
+                //if inserting the new word into the
+                //current line exceeds the limit
+                //insert it into a new line
                 if (lineLength + word.length() > limit) {
                     lines.add(currentLine.toString());
                     currentLine = new StringBuilder();
